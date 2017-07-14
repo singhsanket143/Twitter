@@ -1,23 +1,41 @@
 header {
-  height: 5 0px;
-  background-color: White;
-  border-bottom: 1px solid Black;
-  display: flex;
-  justify-content: space-between;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    border-bottom: 1px solid grey;
+    div.logo {
+        img {
+        	height: 50px;
+        }
+    }
 
-  div.logo {
-    img {
-      height: 50px;
+    nav {
+    	ul{
+    		display: flex;
+    		li{
+    			list-style: none;
+    			margin-right: 10px;
+    		}
+    	}
     }
-  }
-  nav{
-    ul{
-      display: flex;
-      li{
-        list-style: none;
-        margin-right: 15px;
-        margin-top: 18px;
-      }
-    }
-  }
+}
+
+main {
+	display: flex;
+	aside{
+		width: 250px;
+	}
+
+	section{
+		flex-grow: 1;
+		div.createTweet{
+			textarea{
+				width: 90%;
+				padding-left: 4px;
+				padding-top: 4px;
+			}
+		}
+	}
 }
