@@ -1,0 +1,23 @@
+header {
+  height: 5 0px;
+  background-color: White;
+  border-bottom: 1px solid Black;
+  display: flex;
+  justify-content: space-between;
+
+  div.logo {
+    img {
+      height: 50px;
+    }
+  }
+  nav{
+    ul{
+      display: flex;
+      li{
+        list-style: none;
+        margin-right: 15px;
+        margin-top: 18px;
+      }
+    }
+  }
+}
