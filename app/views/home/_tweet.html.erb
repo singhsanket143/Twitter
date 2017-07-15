@@ -1,19 +1,24 @@
 <div class="tweet">
-  <div class="left">
-    <div class="userImage">
+	<div class="left">
+		<div class="userImage">
 
-    </div>
-  </div>
-  <div class="right">
-    <div class="userDetails">
-      <%=tweet.user.email%>
-    </div>
-    <div class="content">
-      <%=tweet.content%>
-    </div>
-    <div class="actions">
+<% if tweet.user.profile_pic %>
 
-    </div>
-  </div>
+	<img src="/uploads/<%=tweet.user.profile_picture %>">
+<% end %>
 
+		</div>
+	</div>
+
+
+	<div class="right">
+		<div class="userDetail">
+			<%= tweet.user.email %>
+		</div>
+		<div class="content">
+			<%= tweet.content %>
+		</div>
+		<div class="actions">
+		</div>
+	</div>
 </div>

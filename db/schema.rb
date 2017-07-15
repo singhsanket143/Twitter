@@ -11,13 +11,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170714210310) do
+ActiveRecord::Schema.define(version: 20170715090304) do
 
   create_table "follow_mappings", force: :cascade do |t|
     t.integer  "follower_id"
     t.integer  "followee_id"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+  end
+
+  create_table "profile_picture_in_users", force: :cascade do |t|
+    t.string "profile_picture"
   end
 
   create_table "tweets", force: :cascade do |t|
@@ -46,6 +50,7 @@ ActiveRecord::Schema.define(version: 20170714210310) do
     t.string   "unconfirmed_email"
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
+    t.string   "profile_pic"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true
