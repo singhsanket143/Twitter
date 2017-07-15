@@ -37,4 +37,8 @@ class HomeController < ApplicationController
     current_user.save!
     return redirect_to '/profile'
   end
+
+  def ajax
+    render :json=>{text: "text"}
+  end
 end
