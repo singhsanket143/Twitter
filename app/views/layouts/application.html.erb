@@ -22,7 +22,22 @@
       noty({text: '<%= alert %>', type: 'error', timeout: 5000, progressBar: true});
     </script>
     <% end %>
+    <%if user_signed_in?%>
+    <header>
+      <div class="logo">
+<%=link_to home_index_path,method: :get do %>
 
+          <%= image_tag 'images.png'%>
+<%end%>
+      </div>
+      <nav>
+        <ul>
+          <li><%=link_to "Users", users_path%></li>
+          <li><%= link_to "Sign Out",destroy_user_session_path,method: :delete%></li>
+        </ul>
+      </nav>
+    </header>
+    <%end%>
     <%= yield %>
 
   </body>
