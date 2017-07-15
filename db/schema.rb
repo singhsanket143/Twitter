@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170715090304) do
+ActiveRecord::Schema.define(version: 20170715125425) do
 
   create_table "follow_mappings", force: :cascade do |t|
     t.integer  "follower_id"
@@ -19,6 +19,16 @@ ActiveRecord::Schema.define(version: 20170715090304) do
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
   end
+
+  create_table "likes", force: :cascade do |t|
+    t.integer  "tweet_id"
+    t.integer  "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "likes", ["tweet_id"], name: "index_likes_on_tweet_id"
+  add_index "likes", ["user_id"], name: "index_likes_on_user_id"
 
   create_table "profile_picture_in_users", force: :cascade do |t|
     t.string "profile_picture"
